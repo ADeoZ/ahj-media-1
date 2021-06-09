@@ -60,5 +60,6 @@ export default class Timeline {
         });
       });
     }
+    return new Promise((resolve, reject) => reject(new Error('No Geolocation API')));
   }
 }
