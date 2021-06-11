@@ -1,0 +1,147 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.timeline {
+    width: 800px;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.timeline_main {
+    display: flex;
+}
+
+.timeline_decorline {
+    width: 10px;
+    background-color: cadetblue;
+    border-radius: 5px;
+}
+
+.timeline_container {
+    width: 100%;
+    list-style: none;
+    padding-left: 0px;
+}
+
+.timeline_post {
+    position: relative;
+    background-color: rgb(220, 232, 241);
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    padding: 10px 20px;
+}
+
+.timeline_post::before {
+    content: '';
+    position: absolute;
+    left: -50px;
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    background-color: #31696b;
+}
+
+.timeline_post_container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.timeline_post_message {
+    font-size: 18px;
+    width: 85%;
+    padding-right: 20px;
+}
+
+.timeline_post_time {
+    width: 15%;
+}
+
+.timeline_post_geo::after {
+    content: '🌏';
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.timeline_form {
+    position: relative;
+    margin-top: -5px;
+}
+
+.timeline_form_textarea {
+    box-sizing: border-box;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 60px;
+    max-height: 60px;
+    font-size: 16px;
+    padding: 10px 10px;
+}
+
+.timeline_form_error {
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0px 5px;
+    background-color: brown;
+    color: #ffffff
+}
+
+.timeline_geo {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.timeline_geo_form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 400px;
+    overflow: auto;
+    background: #fff;
+    position: relative;
+    border: 1px #5f5f5f solid;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 18px;
+}
+
+.timeline_geo_container {
+    position: relative;
+}
+
+.timeline_geo_input {
+    width: 300px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border-radius: 2px;
+    font-size: 18px;
+}
+
+.timeline_geo_form button {
+    width: 150px;
+    padding: 5px 10px;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.timeline_geo_error {
+    position: absolute;
+    width: 300px;
+    box-sizing: border-box;
+    background-color: brown;
+    color: #ffffff;
+    font-size: 13px;
+    text-align: center;
+}
