@@ -1,4 +1,4 @@
-import Timeline from '../Timeline';
+import GEO from '../Geo';
 
 test.each([
   ['First correct', '51.50851, −0.12572', { latitude: '51.50851', longitude: '−0.12572' }],
@@ -8,8 +8,7 @@ test.each([
   ['Second Incorrect', '12', { error: 'incorrect' }],
   ['Third Incorrect', '123,13', { error: 'incorrect' }],
 ])(('check geo coords'), (_, input, expected) => {
-  document.body.innerHTML = '<section class="timeline"></section>';
-  const timeline = new Timeline(document.querySelector('section.timeline'));
-  const result = timeline.geoInputFormat(input);
+  const geo = new GEO();
+  const result = geo.geoInputFormat(input);
   expect(result).toStrictEqual(expected);
 });
